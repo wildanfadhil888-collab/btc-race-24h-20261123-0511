@@ -12,7 +12,7 @@
 //
 // One position at a time, 95% of cash. Exits: a trailing stop once the trade
 // is up > 30 bps (sell on a >= 50 bps pullback from the post-entry high),
-// a wide -300 bps stop, and a 180-bar time cap. After a sale the bot rests
+// a wide -300 bps stop, and a 240-bar time cap. After a sale the bot rests
 // 20 bars. If nothing has traded by bar 1200 the entry bars are loosened
 // once (50 / 120 bps) so the window cannot end with zero trades.
 //
@@ -37,7 +37,7 @@ const LOOSE_HOUR = 120;
 const TRAIL_ARM = 30;
 const TRAIL_GIVEBACK = 50;
 const STOP_LOSS = -300;
-const MAX_HOLD_BARS = 180;
+const MAX_HOLD_BARS = 240;
 const REST_BARS = 20;
 
 // Insurance + late-window guard.
